@@ -1,0 +1,21 @@
+.popup {
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: 500px;
+  }
+
+  .close-button {
+    position: absolute;
+    right: 10px;
+    top: 8px;
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    color: #333;
+    cursor: pointer;
+  }
+

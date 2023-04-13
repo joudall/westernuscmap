@@ -1,0 +1,18 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+* {
+  margin:auto;
+  padding:auto;
+}
+
+.wrapper {
+  height:1200px;
+  background-color: #4A2272;
+}
+
