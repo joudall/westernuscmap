@@ -24,6 +24,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Rooms 11-32"}/>
             
             <Room
@@ -56,6 +57,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Grocery Store 73"}/>
 
             <Room
@@ -71,6 +73,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Lifetouch Photography 79"}/>
 
             <Room
@@ -86,6 +89,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Room 78C"}/>
 
             <Room
@@ -101,6 +105,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Peersupport 76"}/>
 
             <Room
@@ -132,6 +137,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Room 76A"}/>
 
             <Room
@@ -163,6 +169,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.02,0]}
             Hovered={selectedRoom === "Western Chiropractic 49"}/>
 
             <Room
@@ -178,6 +185,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Starbucks"}/>
 
             <Room
@@ -209,6 +217,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Campus Tours 53"}/>
 
             <Room
@@ -224,6 +233,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 54B"}/>
 
             <Room
@@ -239,6 +249,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 54A"}/>
 
             <Room
@@ -254,6 +265,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Western Foot Patrol 57"}/>
 
             <Room
@@ -269,6 +281,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 66"}/>
 
             <Room
@@ -284,6 +297,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 61"}/>
             
             <Room
@@ -331,6 +345,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 63"}/>
 
             <Room
@@ -346,6 +361,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 58"}/>
 
             <Room
@@ -477,6 +493,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Room 56"}/>
 
             <Room
@@ -510,8 +527,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             currentLevel={currentLevel}
             floorPosition={[0, 0.01, 0]}
             Hovered={selectedRoom === "Room 36A"}/>
-
-
+            
             <Room
             roomNumber="Campus Vision 36C"
             position={[0.46, 0.01, -1.37]}
@@ -557,6 +573,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Bathroom #1"}/>
 
             <Room
@@ -604,6 +621,7 @@ export function LowerLevel({lowerRef,handleFloorClick,onHover,onUnhover, hovered
             hoveredRoom={hoveredRoom}
             showPopup={showPopup}
             currentLevel={currentLevel}
+            floorPosition={[0,0.01,0]}
             Hovered={selectedRoom === "Bathroom #3"}/>
 
             <Room

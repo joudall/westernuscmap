@@ -275,7 +275,7 @@ function App() {
               marginBottom: "10px",
             }}
           >
-          {popupExpanded ? <FaCaretUp/> : <FaCaretDown/>}
+          {popupExpanded ? <FaCaretDown/> : <FaCaretUp/>}
           </button>
           {popupExpanded &&(
             <>
