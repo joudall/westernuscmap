@@ -49,7 +49,11 @@ npm start
 
 3. Open your browser to http://localhost:3000 to view the application.
 
+## Download .blend Files
 
+Please ensure you have all the floor blend models downloaded and in your /public folder before running.
+
+Google Drive: https://drive.google.com/file/d/1dfUWG1Q48s_19vdqtjVTil4MtsXlQF1U/view?usp=sharing
 
 ## JSON Data Format
 
@@ -74,9 +78,6 @@ The data for the rooms and their information is stored in a JSON file with the f
 This application requires @react-three/fiber, @react-three/drei, and react-icons packages. 
 
 Please ensure you have these dependencies installed before running the application.
-
-
-
 
 
 ## Feedback
