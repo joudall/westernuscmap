@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@react-three/drei": "^9.66.1",
+    "@react-three/fiber": "^8.13.0",
     "antd": "^5.2.2",
     "bootstrap": "^5.2.3",
     "cra-template": "1.2.0",
