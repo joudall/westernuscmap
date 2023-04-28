@@ -53,7 +53,7 @@ npm start
 
 Please ensure you have all the floor blend models downloaded and in your /public folder before running.
 
-Google Drive: https://drive.google.com/file/d/1dfUWG1Q48s_19vdqtjVTil4MtsXlQF1U/view?usp=sharing
+Google Drive:https://drive.google.com/drive/folders/1rJ4jcVRnE-BP6AKrUwJ22D0g36eKeuqH?usp=sharing
 
 ## JSON Data Format
 
