@@ -1,11 +1,3 @@
-body,
-html {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  overflow: hidden;
-}
-
 * {
   margin:auto;
   padding:auto;
@@ -14,5 +6,34 @@ html {
 .wrapper {
   height:1200px;
   background-color: #4A2272;
+}
+
+.logo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+html,
+body,
+#root,
+.wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 912px) {
+  .logo img {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+}
 }
 

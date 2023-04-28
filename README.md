@@ -1,70 +1,85 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# UCC Interactive Building Explorer
 
-## Available Scripts
+This is an interactive building explorer application built with React, React Three Fiber, and Drei. Users can navigate through different levels of the building, hover over individual rooms to view basic information, and click on rooms for more details. The application also includes search functionality for quick navigation.
 
-In the project directory, you can run:
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Requirements
+Nodejs must be installed
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+The GLTF file has to be present in your projects /public folder
+three (>= 122.x)
 
-### `npm test`
+@react-three/fiber (>= 5.x)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+@react-three/drei (>= 2.x)
+## Main Components
+- App:
+    The main application component.
+- Atrium, Level2, LowerLevel, Level3: 
+    Components representing each floor in the building.
+- CameraController: 
+    Component for controlling the camera position.
+- ModelController: 
+    Component for managing the visibility of different floor models.
+- RoomList: 
+    Component for displaying a searchable list of rooms.
 
-### `npm run build`
+## Features
+- Interactive 3D building visualization
+- Multiple building levels 
+    (Lower Level, Atrium, Level 2, Level 3)
+- Room search functionality
+- Hover effect for room preview
+- Clickable rooms for detailed information
+- Mobile-friendly sidebar navigation
+## NPM
+This project uses npm as a package manager for javascript dev dependencies.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+How to install npm
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Getting Started
+1. Install dependencies:
+npm Install
 
-### `npm run eject`
+2. Run the development server:
+npm start
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+3. Open your browser to http://localhost:3000 to view the application.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## JSON Data Format
 
-## Learn More
+The data for the rooms and their information is stored in a JSON file with the following format:
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+```json
+[
+{
+  "Level": {
+    "Room #": {
+      "Name": "Room #",
+      "Content": "Information here.",
+      "Hours": "Enter hours of operation",
+      "Website": "https://..."
+    },
+    ...
+}
+]
+```
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Note
+This application requires @react-three/fiber, @react-three/drei, and react-icons packages. 
 
-### Code Splitting
+Please ensure you have these dependencies installed before running the application.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
 
-### Analyzing the Bundle Size
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Feedback
 
-### Advanced Configuration
+If you have any feedback, please reach out to us at https://westernusc.ca/contact-us/
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)

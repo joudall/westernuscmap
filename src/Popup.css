@@ -1,21 +1,68 @@
 .popup {
+  position: fixed;
+  top: 10px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 5px;
+  width: 400px;
+  box-sizing: border-box;
+  overflow: auto;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.popup a {
+  word-break: break-all;
+  display: inline-block;
+  max-width: 100%;
+  color: #4A2272;
+}
+
+.popup a:hover{
+  color:#3D1A5F;
+}
+
+.popup.expanded {
+  max-height: none;
+  transition: max-height 0.3s ease-in-out;
+}
+
+.popup-collapsed {
+  height: 50px;
+  overflow: hidden;
+}
+
+.close-button {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  background-color: transparent;
+  border: none;
+  font-size: 18px;
+  color: black;
+  cursor: pointer;
+}
+
+.toggle-details-btn {
+  display: none;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 912px) {
+  .popup {
+    width: 400px;
     position: fixed;
-    top: 10px;
-    left: 10px;
-    background-color: white;
-    padding: 10px;
-    border-radius: 5px;
-    width: 500px;
+    top:auto;
+    bottom: 10px;
   }
-
   .close-button {
-    position: absolute;
-    right: 10px;
-    top: 8px;
-    background-color: transparent;
-    border: none;
-    font-size: 18px;
-    color: #333;
-    cursor: pointer;
+    top: 10px;
+    right: 20px;
   }
-
+  .toggle-details-btn {
+    display: block;
+  }
+  .popup-collapsed {
+    height: 50px;
+    overflow: hidden;
+  }
+}

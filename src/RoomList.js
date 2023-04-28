@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './RoomList.css';
-import roomData from './roomData';
+import roomData from './roomData.json';
 
 function RoomList({ handleRoomClick }) {
   const [searchValue, setSearchValue] = useState('');
@@ -22,25 +22,30 @@ function RoomList({ handleRoomClick }) {
     );
     setFilteredRooms(filtered);
   };
-
+  
   return (
-    <div className="roomlist-container">
-      <input
+    <>
+    <div className='search-container'>
+    <input
         type="text"
         placeholder="Search for a room..."
         value={searchValue}
         onChange={handleSearchChange}
       />
+      </div>
+
       {searchValue && (
+      <div className="roomlist-container">
         <ul className="roomlist">
           {filteredRooms.map((room, index) => (
-            <li key={index} onClick={() => handleRoomClick(room.Parent, room.Name)}>
+            <li key={index} onClick={() => handleRoomClick(room.Parent, room.Name, room.Name)}>
               {room.Parent} - {room.Name}
             </li>
           ))}
         </ul>
-      )}
-    </div>
+      </div>
+    )}
+    </>
   );
 }
 

@@ -1,110 +1,234 @@
 .roomlist-container {
-    width: 100%;
-    padding: 10px;
-    background-color: #fff;
-    border-radius: 5px;
-    border:none;
-    margin: 20px;
-  }
-  
-  .roomlist-container input {
-    width: 250px;
-    padding: 10px;
-    border: none;
-    border-color: transparent;
-    border-radius: 5px;
-    font-size: 1rem;
-  }
+  width: auto;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 60px;
+  position: fixed;
+  right: 80px;
+  background-color: white;
+  max-height: 300px;
+  overflow-y: auto;
+}
 
-  .roomlist-container :active {
-    border: none;
-    border-color: transparent;
-  }
-  
-  .roomlist {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-  }
-  
-  .roomlist li {
-    padding: 5px;
-  }
-  
-  .roomlist li:hover {
-    background-color: #eee;
-    cursor: pointer;
-  }
-  
-  
-  .level-button {
-    border-radius: 20px;
-    background-color: white;
-    width: 160px;
-    height: 50px;
-    border: none;
-    font-size: 16px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 40px;    
-    cursor: pointer;
-  }
-  
-  .level-dropdown {
-    position: absolute;
-    background-color: #fff;
-    min-width: 160px;
-    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-    z-index: 1;
-    border-radius: 5px;
-    top: 50px;
-  }
-  
-  .level-dropdown-item {
-    color: black;
-    padding: 12px 16px;
-    border:none;
+.roomlist-container input {
+  width: 250px;
+  padding: 10px;
+  top:10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.roomlist {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.roomlist li {
+  padding: 5px;
+}
+
+.roomlist li:hover {
+  background-color: #eee;
+  cursor: pointer;
+}
+
+.level-button {
+  border-radius: 20px;
+  background-color: white;
+  width: 160px;
+  height: 50px;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 40px;   
+  top:20px; 
+  cursor: pointer;
+}
+
+.level-dropdown {
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 5px;
+  top: 50px;
+}
+
+.level-dropdown-item {
+  color: black;
+  padding: 12px 16px;
+  border:none;
+  background-color: transparent;
+  text-decoration: none;
+  display: block;
+  width: 160px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+.level-dropdown-item:hover {
+  background-color: #ddd;
+}
+
+.level-button:active {
+  background-color: #ddd;
+}
+
+.controls-container {
+  position: absolute;
+  top: 400px;
+  left: 100px ;
+  z-index: 1;
+  width: 300px;
+  border-radius: 5px;
+}
+
+.search-container {
+  position: fixed;
+  right: 80px;
+  z-index: 10;
+  top: 30px;
+  border-radius: 5px;
+  max-height: calc(100% - 20px);
+  overflow-y: auto;
+  border-color: transparent;
+}
+
+.search-button {
+  position: fixed;
+  top: 20px;
+  right: 40px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+  outline: none;
+  color: white;
+  padding: 5px;
+}
+
+.roomlist-container input {
+  width: 100%;
+  padding: 10px;
+  top:10px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  box-sizing: border-box; 
+  outline: none;
+}
+
+.search-container label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  transition: all 0.2s ease-in-out;
+}
+
+.search-container span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background-color: #5a5a5a;
+}
+
+.search-container span::before {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #5a5a5a;
+  transition: all 0.2s ease-in-out;
+}
+
+.hamburger-menu {
+  display: none;
+  cursor: pointer;
+  font-size: 30px;
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  z-index: 1001;
+}
+
+.sidebar {
+display: none;
+position: fixed;
+left: 0;
+top: 0;
+width: 200px;
+height: 100%;
+background-color: #fff;
+overflow-y: auto;
+z-index: 1000;
+padding: 20px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar ul {
+list-style-type: none;
+padding: 0;
+margin: 0;
+}
+
+.sidebar ul li {
+padding: 8px 16px;
+cursor: pointer;
+}
+
+.sidebar ul li:hover {
+background-color: #ddd;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 912px) {
+.hamburger-menu {
+  display: block;
+  color: white;
+}
+.level-button {
+display: none;
+}
+.sidebar.open {
+display: block;
+}
+.search-container {
+  top:20px;
+  width: 80px;
+  right: 70px;
+}
+.search-button {
+    position: fixed;
+    top: 10px;
+    right: 30px;
     background-color: transparent;
-    text-decoration: none;
-    display: block;
-    width: 160px;
-    border-radius: 5px;
-    font-size: 16px;
-  }
-  
-  .level-dropdown-item:hover {
-    background-color: #ddd;
-  }
-
-  .level-button:active {
-    background-color: #ddd;
-  }
-  
-  .controls-container {
-    position: absolute;
-    top: 400px;
-    left: 100px ;
-    z-index: 1;
-    width: 300px;
-    border-radius: 5px;
-  }
-  
-  .search-container {
-    position: absolute;
-    width: 300px;
-    top: 20px;
-    right: 100px;
-    z-index: 1;
     border: none;
-  }
-  
-  .search-icon {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1;
     cursor: pointer;
+    font-size: 24px;
+    outline: none;
     color: white;
-  }
-  
+}
+.roomlist-container {
+  width: fit-content;
+  margin-top: 50px;
+  position: fixed;
+  right: 70px;
+  max-height: 300px;
+  overflow-y: auto;
+}
+.roomlist-container div{
+  width: auto;
+}
+.roomlist-container input {
+  margin-right: 10px;
+}
+}

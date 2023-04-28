@@ -26,7 +26,7 @@
   },
   "Atrium Lounge":{
     "Name":"Atrium Lounge",
-    "Content":"This is the content for room 5",
+    "Content":"Lounge spot.",
     "Hours": "10AM - 3PM",
     "Website": "https://westernusc.ca/services/reservations/atrium-lowerlevel-concretebeach/"
   },
@@ -60,11 +60,11 @@
     "Hours": "",
     "Website":""
   },
-  "Room 149":{
-    "Name":"Room 149",
+  "Purple Bikes 149":{
+    "Name":"Purple Bikes 149",
     "Content":"This is a classroom.",
-    "Hours":"",
-    "Website":""
+    "Hours":"Open Monday to Thursday 4-7PM",
+    "Website":"https://www.instagram.com/purplebikesuwo/?hl=en"
   },
   "UCC Bathroom":{
     "Name":"UCC Bathroom",
@@ -93,14 +93,20 @@
       "Hours":"",
       "Website":""
   },
-    "Digital USC Room": {
-      "Name":"Digital USC Room",
-      "Content":"",
-      "Hours":"8:30AM - 4:30PM",
+    "Digital USC Services 265": {
+      "Name":"Digital USC Services 265",
+      "Content":"This is the USC Digital Serbices Office",
+      "Hours":"Weekdays- 8:30AM - 4:30PM",
       "Website":""
   },
-  "Gazette":{
-    "Name":"Gazette",
+  "Graphic Services": {
+    "Name":"Graphic Services",
+    "Content":"Graphic Services is one of four operations belonging to Western Retail Services. Owned and operated by the University, Graphic Services’ revenues are returned to Western for student programs and facilities. Graphic Services has been in operation since May, 1974.",
+    "Hours":"Monday to Friday 8:30 am to 4:30 pm; \n Closed Saturday, Sunday and University Holidays",
+    "Website":"https://www.graphicservices.uwo.ca/"
+  },
+  "Gazette 263":{
+    "Name":"Gazette 263",
     "Content":"The Gazette is the official student newspaper at Western University in London, Ontario. The Gazette publishes online daily. We are one of the largest student newspapers in Canada, with an editorial board consisting of 18 editors and two full-time editorial staff.",
     "Hours":"",
     "Website":"https://westerngazette.ca/"
@@ -111,11 +117,11 @@
     "Hours":"",
     "Website":"https://westernusc.ca/services/reservations/mustang-lounge/"
   },
-  "Room 270":{
-    "Name":"Room 270",
-    "Content":"This is a classroom.",
+  "Off-Campus Resource Centre 270":{
+    "Name":"Off-Campus Resource Centre 270",
+    "Content":"Welcome to Western's Off-Campus Housing Service! The Off-Campus Housing Service strives to provide students and staff a variety of housing options with over 5,000 listings annually.",
     "Hours":"",
-    "Website":""
+    "Website":"https://offcampus.uwo.ca/"
   },
   "Room 249":{
     "Name":"Room 249",
@@ -123,20 +129,20 @@
     "Hours":"",
     "Website":""
   },
-  "CHRW":{
-    "Name":"CHRW",
+  "CHRW 250":{
+    "Name":"CHRW 250",
     "Content":"Founded in 1981, CHRW aims to provide a voice to Western and London communities. We are deeply-rooted in developing capacity in our communities through volunteerism and training.",
     "Hours":"",
     "Website":"https://radiowestern.ca/"
   },
-  "271 to 279":{
-    "Name":"Room 271 to 279",
-    "Content":"This is a classroom.",
+  "Rooms 271 to 279":{
+    "Name":"Rooms 271 to 279",
+    "Content":"These are classrooms.",
     "Hours":"",
     "Website":""
   },
-  "McKeller Room":{
-    "Name":"McKeller Room",
+  "McKeller Room 290":{
+    "Name":"McKeller Room 290",
     "Content":"The McKellar Room is located on the second floor of the University Community Centre (UCC) and is available to book for your next speaker, panel discussion, film screening, meeting, training day, etc.",
     "Hours":"9AM - 10PM",
     "Website":"https://westernusc.ca/services/reservations-draft/mckellar-room/"
@@ -150,12 +156,6 @@
   "Room 280":{
     "Name":"Room 280",
     "Content":"This is a classroom.",
-    "Hours":"",
-    "Website":""
-  },
-  "Elevator":{
-    "Name":"Second Floor Elevator",
-    "Content":"This is an elevator in the second floor.",
     "Hours":"",
     "Website":""
   },
@@ -182,11 +182,23 @@
     "Content":"This is a bathroom.",
     "Hours":"",
     "Website":""
+  },
+  "Community Room 269":{
+    "Name":"Community Room 269",
+    "Content":"The Community Room is located on the second floor of the University Community Centre (UCC) and is available to book for your teams next meeting, luncheon, conference, panel, interview, team building activity, brainstorm, etc.",
+    "Hours":"",
+    "Website":"https://westernusc.ca/services/reservations/community-rooms/"
+  },
+  "Room 270 #1":{
+    "Name":"Room 270 #1",
+    "Content":"This is a community room.",
+    "Hours":"",
+    "Website":""
   }
 },
   "Level 3":{
     "Room 377":{
-      "Name":"Room 337",
+      "Name":"Room 377",
       "Content":"This is a confrence room.",
       "Hours":"",
       "Website":"https://westernusc.ca/services/reservations/conference-rooms/"
@@ -227,39 +239,33 @@
     "Hours":"",
     "Website":""
   },
-  "Room 303, 304, 305":{
-    "Name":"Room 303, 304 and 305",
+  "Rooms 312-313":{
+    "Name":"Rooms 312-313",
     "Content":"USC Staff Offices",
-    "Hours":"",
-    "Website":""
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
-  "Room 312-313":{
-    "Name":"Room 312-313",
-    "Content":"Staff Offices",
-    "Hours":"",
-    "Website":""
-  },
-  "Room 380-311":{
-    "Name":"Room 380-311",
-    "Content":"Staff Offices",
-    "Hours":"",
-    "Website":""
+  "Rooms 380-311":{
+    "Name":"Rooms 308-311",
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
   "Room 350":{
     "Name":"Room 350",
-    "Content":"",
-    "Hours":"",
-    "Website":""
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
-  "Room 351":{
-    "Name":"Room 351",
+  "PMA 351":{
+    "Name":"PMA 351",
     "Content":"This is a confrence room.",
     "Hours":"",
     "Website":""
   },
   "Room 351A":{
     "Name":"Room 351A",
-    "Content":"",
+    "Content":"This is an office.",
     "Hours":"",
     "Website":""
   },
@@ -277,39 +283,45 @@
   },
   "Room 315":{
     "Name":"Room 315",
-    "Content":"",
-    "Hours":"",
-    "Website":""
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
+  },
+  "Room 316":{
+    "Name":"Room 316",
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
+  },
+  "Rooms 303, 304, 305":{
+    "Name":"Rooms 303, 304, 305",
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
   "USC Main Office 340":{
     "Name":"USC Main Office 340",
-    "Content":"The University Students’ Council (USC) is a student-led organization that first and foremost exists to advocate for and represent undergraduate students at Western University. Since 1965, we have grown beyond an advocacy organization, becoming one of the largest student governments in Canada and one of the largest not-for-profits in London, Ontario Canada. Each day, we work to support, improve and enhance your student experience, because we believe that students have the power to change the world.",
+    "Content":"The University Students’ Council (USC) is a student-led organization that first and foremost exists to advocate for and represent undergraduate students at Western University. Each day, we work to support, improve and enhance your student experience, because we believe that students have the power to change the world.",
     "Hours":"Monday - Friday: 8:30AM - 4:30PM",
     "Website":"https://westernusc.ca/"
   },
   "Room 320":{
     "Name":"Room 320",
-    "Content":"",
-    "Hours":"",
-    "Website":""
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
   "Room 301":{
     "Name":"Room 301",
-    "Content":"",
-    "Hours":"",
-    "Website":""
+    "Content":"This is the Student Annex.",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
   "Room 318":{
     "Name":"Room 318",
-    "Content":"",
-    "Hours":"",
-    "Website":""
-  },
-  "Elevator":{
-    "Name":"Third Floor Elevator",
-    "Content":"This is the third floors elevator.",
-    "Hours":"",
-    "Website":""
+    "Content":"USC Staff Offices",
+    "Hours":"Monday - Friday: 8:30AM - 4:30PM",
+    "Website":"https://westernusc.ca/"
   },
   "Bathroom #1":{
     "Name":"Bathroom #1",
@@ -324,9 +336,9 @@
     "Website":""
   }
 },
-  "Lower Level":{
-  "Room 11-32": {
-    "Name":"Room 11-32",
+"Lower Level":{
+  "Rooms 11-32": {
+    "Name":"Rooms 11-32",
     "Content": "These are classrooms.",
     "Hours": "",
     "Website":""
@@ -337,20 +349,26 @@
     "Hours": "Monday - Friday: 9AM - 5PM \n Saturday - Saturday: Closed",
     "Website":"https://bookstore.uwo.ca/"
   },
-  "Room 73":{
-    "Name":"Room 73",
-    "Content": "This is a classroom.",
-    "Hours":"",
-    "Website":""
+  "Grocery Store 73":{
+    "Name":"Grocery Store 73",
+    "Content": "Grocery Checkout Fresh Market - University of Western Ontario, Located on the lower level of the UC",
+    "Hours":"Monday- Friday: 10AM - 6PM \n Saturday - Sunday: 11AM - 5PM",
+    "Website":"https://www.facebook.com/GCILondonON"
   },
-  "Room 79":{
-    "Name":"Room 79",
+  "Lifetouch Photography 79":{
+    "Name":"Lifetouch Photography 79",
+    "Content":"Your senior year is meant to be celebrated! Our goal is to ensure Seniors have a personalized, authentic, and fun photography session with us. We understand the importance of this once-in-a-lifetime experience and capturing YOU and your personality to commemorate this milestone.",
+    "Hours":"Monday - Friday: 9AM - 5PM \n Saturday - Saturday: Closed",
+    "Website":"https://local.prestigeportraits.ca/on/london/university-of-western-ontario.html"
+  },
+  "Room 78C":{
+    "Name":"Room 78C",
     "Content":"This is a classroom.",
     "Hours":"",
     "Website":""
   },
-  "Peersupport 78":{
-    "Name":"Peersupport 78",
+  "Peersupport 76":{
+    "Name":"Peersupport 76",
     "Content":"The centre is a safe space in which students can express their feelings and explore resource options provided by the university, the city of London, and the USC",
     "Hours":"The centre is open every week Monday-Friday 10:00AM – 4:00PM during the academic year.",
     "Website":"https://westernusc.ca/services/peer-support-centre/"
@@ -385,17 +403,17 @@
     "Hours":"Monday - Friday: 8AM - 3PM \n Saturday - Sunday: Closed",
     "Website": "https://eateries.uwo.ca/Home/Eatery/254"
   },
-  "Room 34A":{
-    "Name":"Room 34A",
-    "Content":"This is a classroom.",
-    "Hours":"",
-    "Website":""
+  "Life Labs 34A":{
+    "Name":"Life Labs 34A",
+    "Content":"LifeLabs is a Canadian-owned company that has been serving the healthcare needs of Canadians for more than 50 years",
+    "Hours":"Latest time for blood draw: 10:45AM",
+    "Website":"https://www.lifelabs.com/"
   },
-  "Room 53":{
-    "Name":"Room 53",
-    "Content":"This is a classroom.",
+  "Campus Tours 53":{
+    "Name":"Campus Tours 53",
+    "Content":"Current Western students will guide you around campus to help you truly understand what it’s like to live, learn and play here. Tours will take approximately two hours and 15 minutes.",
     "Hours":"",
-    "Website":""
+    "Website":"https://welcome.uwo.ca/what-is-western-like/location/visit.html"
   },
   "Room 54B":{
     "Name":"Room 54B",
@@ -409,8 +427,8 @@
     "Hours":"",
     "Website":"https://wts.uwo.ca/ctg/classrooms/university_community_centre/ucc_54a.html"
   },
-  "Room 57":{
-    "Name":"Room 57",
+  "Western Foot Patrol 57":{
+    "Name":"Western Foot Patrol 57",
     "Content":"The Western Foot Patrol office.",
     "Hours":"",
     "Website":"https://www.uwo.ca/footpatrol/contact_us/location.html"
@@ -469,25 +487,18 @@
     "Hours":"",
     "Website":"https://wts.uwo.ca/ctg/classrooms/university_community_centre/ucc_41.html"
   },
-  "Room 78C":{
-    "Name":"Room 78C",
-    "Content":"Peersupport Centre is a safe space in which students can express their feelings and explore resource options provided by the university, the city of London, and the USC.",
-    "Hours":"Monday-Friday, 10:00AM - 4:00PM during the academic year.",
-    "Website":"https://westernusc.ca/services/peer-support-centre/"
-  },
   "Multifaith 38":{
     "Name":"Multifaith 38",
     "Content":"This is a prayer room.",
     "Hours":"",
     "Website":""
   },
-  "Food Support Services 40":{
-    "Name":"Food Support Services 40",
+  "Food Support Services 40F":{
+    "Name":"Food Support Services 40F",
     "Content":"The centre is a safe space in which students can express their feelings and explore resource options provided by the university, the city of London, and the USC.",
     "Hours":"Monday - Friday 10am-3pm, extended hours until 5pm on Wednesdays.    ",
     "Website":"https://westernusc.ca/services/peer-support-centre/"
   },
-
   "Room 47":{
     "Name":"Room 47",
     "Content":"New French Immersion Office",
@@ -505,12 +516,6 @@
     "Content":"This is a classroom.",
     "Hours":"",
     "Website":"https://wts.uwo.ca/ctg/classrooms/university_community_centre/ucc_56.html"
-  },
-  "Room 39":{
-    "Name":"Room 39",
-    "Content":"This is a classroom.",
-    "Hours":"",
-    "Website":""
   },
   "UCC Dental":{
     "Name":"UCC Dental",
@@ -560,8 +565,8 @@
     "Hours":"",
     "Website":""
   },
-  "Room 36B":{
-    "Name":"Room 36B",
+  "Room 34B":{
+    "Name":"Room 34B",
     "Content":"This is a classroom.",
     "Hours":"",
     "Website":""

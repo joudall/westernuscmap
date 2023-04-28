@@ -10,66 +10,68 @@ export function Model(props) {
   const { nodes, materials } = useGLTF('/UCCAtrium.gltf')
   return (
     <group {...props} dispose={null}>
-      <mesh geometry={nodes.Room_146.geometry} material={materials.Wall_material} position={[0.01, 0, 0.3]}>
+      <mesh geometry={nodes.Room_146.geometry} material={materials.Wall_material} position={[0.09, 0, 0.3]}>
         <mesh geometry={nodes.Floor007.geometry} material={materials.Floor_material} />
       </mesh>
       <mesh geometry={nodes.Mustang_Lounge_East.geometry} material={materials.Wall_material} position={[-2.67, 0, -0.43]}>
-        <mesh geometry={nodes.Floor005.geometry} material={materials.Floor_material} />
+        <mesh geometry={nodes.Floor003.geometry} material={materials.Floor_material} position={[0, 0.02, 0]} />
       </mesh>
       <mesh geometry={nodes.Centre_Spot.geometry} material={materials.Wall_material} position={[-0.71, 0, -3.5]}>
-        <mesh geometry={nodes.Baseboard003.geometry} material={materials.Baseboard_material} />
-        <mesh geometry={nodes.Floor001.geometry} material={materials.Floor_material} />
+        <mesh geometry={nodes.Floor001.geometry} material={materials.Floor_material} position={[0, 0.02, 0]} />
       </mesh>
-      <mesh geometry={nodes.InfoSource.geometry} material={materials.Wall_material} position={[-1.34, 0, -2.16]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Floor004.geometry} material={materials.Floor_material} position={[0, 0.01, 0]} />
+      <mesh geometry={nodes.InfoSource.geometry} material={materials.Wall_material} position={[-1.3, 0, -2.29]} scale={[1.1, 1, 1]}>
+        <mesh geometry={nodes.Floor004.geometry} material={materials.Floor_material} position={[0, 0.02, 0]} />
       </mesh>
-      <mesh geometry={nodes.Atrium_Lounge.geometry} material={materials.Wall_material} position={[0.85, 0.01, -1.97]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Floor.geometry} material={materials.Floor_material} />
+      <mesh geometry={nodes.Atrium_Lounge.geometry} material={materials.Wall_material} position={[0.83, 0, -2.04]} scale={[1.1, 1, 1]}>
+        <mesh geometry={nodes.Floor.geometry} material={materials.Floor_material} position={[0, 0.02, 0]} />
       </mesh>
-      <mesh geometry={nodes.The_Spoke.geometry} material={materials.Wall_material} position={[1.46, 0, -2.06]} scale={[1.1, 1, 1]}>
+      <mesh geometry={nodes.The_Spoke.geometry} material={materials.Wall_material} position={[1.45, 0, -2.11]} scale={[1.1, 1, 1]}>
         <mesh geometry={nodes.Floor012.geometry} material={materials.Floor_material} />
       </mesh>
       <mesh geometry={nodes.Mustang_Lounge_West.geometry} material={materials.Wall_material} position={[-2.67, 0, 1.51]}>
-        <mesh geometry={nodes.Floor006.geometry} material={materials.Floor_material} position={[0, 0.01, 0]} />
+        <mesh geometry={nodes.Floor006.geometry} material={materials.Floor_material} />
       </mesh>
       <mesh geometry={nodes.Room_147B.geometry} material={materials.Wall_material} position={[0.54, 0, 1.78]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Floor010.geometry} material={materials.Floor_material} position={[0, 0.01, 0]} />
+        <mesh geometry={nodes.Floor010.geometry} material={materials.Floor_material} />
       </mesh>
-      <mesh geometry={nodes.Room_185A.geometry} material={materials.Wall_material} position={[-2.66, 0.01, -3.91]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Baseboard002.geometry} material={materials.Baseboard_material} />
+      <mesh geometry={nodes.Room_185A.geometry} material={materials.Wall_material} position={[-2.66, 0, -3.91]} scale={[1.1, 1, 1]}>
         <mesh geometry={nodes.Floor002.geometry} material={materials.Floor_material} />
       </mesh>
-      <mesh geometry={nodes.Room_147A.geometry} material={materials.Wall_material} position={[1.19, 0, 1.77]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Baseboard009.geometry} material={materials.Baseboard_material} />
+      <mesh geometry={nodes.Room_147A.geometry} material={materials.Wall_material} position={[1.19, 0, 1.78]} scale={[1.1, 1, 1]}>
         <mesh geometry={nodes.Floor011.geometry} material={materials.Floor_material} />
       </mesh>
-      <mesh geometry={nodes.Room_149.geometry} material={materials.Wall_material} position={[-0.14, 0, 1.79]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Baseboard.geometry} material={materials.Baseboard_material} />
+      <mesh geometry={nodes.Room_149.geometry} material={materials.Wall_material} position={[-0.11, 0, 1.79]} scale={[1.1, 1, 1]}>
         <mesh geometry={nodes.Floor009.geometry} material={materials.Floor_material} />
+      </mesh>
+      <mesh geometry={nodes.Elevator.geometry} material={materials.Wall_material} position={[-1.74, 0, -0.97]} scale={[1.1, 1, 1]}>
+        <mesh geometry={nodes.Floor015.geometry} material={materials.Floor_material} />
+      </mesh>
+      <mesh geometry={nodes.Booster_Juice.geometry} material={materials.Wall_material} position={[-0.91, 0, -1.33]} scale={[1.1, 1, 1]}>
+        <mesh geometry={nodes.Floor014.geometry} material={materials.Floor_material} />
       </mesh>
       <mesh geometry={nodes.UCC_Bathroom.geometry} material={materials.Wall_material} position={[0.75, 0, -0.19]} scale={[1.1, 1, 1]}>
         <mesh geometry={nodes.Floor008.geometry} material={materials.Floor_material} />
       </mesh>
-      <mesh geometry={nodes['Bathroom_-_Mustang'].geometry} material={materials.Wall_material} position={[-1.15, 0, -0.44]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Baseboard004.geometry} material={materials.Baseboard_material} />
-        <mesh geometry={nodes.Floor014.geometry} material={materials.Floor_material} />
+      <mesh geometry={nodes['Bathroom_-_Mustang'].geometry} material={materials.Wall_material} position={[-0.45, 0, 0.2]} scale={[1.1, 1, 1]}>
+        <mesh geometry={nodes.Floor005.geometry} material={materials.Floor_material} />
       </mesh>
-      <mesh geometry={nodes.Booster_Juice.geometry} material={materials.Wall_material} position={[-1.35, 0, -1.29]} scale={[1.1, 1, 1]}>
-        <mesh geometry={nodes.Baseboard001.geometry} material={materials.Baseboard_material} />
-        <mesh geometry={nodes.Floor003.geometry} material={materials.Floor_material} />
-      </mesh>
-      <mesh geometry={nodes.Stairs008.geometry} material={materials['Stairs_material.008']} position={[1.92, -0.03, -3.51]} rotation={[Math.PI, -0.69, Math.PI]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs005.geometry} material={materials['Stairs_material.006']} position={[-0.13, 0, 2.78]} rotation={[0, -Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs001.geometry} material={materials['Stairs_material.001']} position={[-0.53, 0, -3.02]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs002.geometry} material={materials['Stairs_material.002']} position={[-0.53, 0, 1.26]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs.geometry} material={materials.Stairs_material} position={[-3, -0.02, -4.37]} rotation={[0, -Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs003.geometry} material={materials['Stairs_material.003']} position={[-2.84, 0, -4.02]} rotation={[Math.PI, 0, Math.PI]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs004.geometry} material={materials['Stairs_material.005']} position={[-1.86, 0, -0.84]} rotation={[0, Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs006.geometry} material={materials['Stairs_material.007']} position={[0.27, 0, 0.11]} rotation={[0, -1.57, 0]} scale={[0.35, 0.98, 0.54]} />
-      <mesh geometry={nodes.Stairs007.geometry} material={materials['Stairs_material.004']} position={[-2.45, 0, 0.09]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs008.geometry} material={materials.Dark} position={[1.92, 0, -3.51]} rotation={[Math.PI, -0.69, Math.PI]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs005.geometry} material={materials.Dark} position={[-0.13, -0.02, 2.78]} rotation={[0, -Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs001.geometry} material={materials.Dark} position={[-0.51, 0, -3.01]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs002.geometry} material={materials.Dark} position={[-0.52, -0.02, 1.37]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs.geometry} material={materials.Stairs_material} position={[-3, 0, -4.37]} rotation={[0, -Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs003.geometry} material={materials.Dark} position={[-2.84, 0, -4.02]} rotation={[Math.PI, 0, Math.PI]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs004.geometry} material={materials.Dark} position={[-1.86, 0, -0.55]} rotation={[0, Math.PI / 2, 0]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs006.geometry} material={materials.Dark} position={[0.27, 0.02, 0.11]} rotation={[0, -1.57, 0]} scale={[0.35, 0.98, 0.54]} />
+      <mesh geometry={nodes.Stairs007.geometry} material={materials.Dark} position={[-2.45, -0.02, 0.09]} scale={[0.35, 0.98, 0.54]} />
       <mesh geometry={nodes.Exterior_Walls.geometry} material={materials.Wall_material} position={[-2.55, 0, -5.32]}>
         <mesh geometry={nodes.Floor013.geometry} material={materials.Floor_material} position={[0, -0.02, 0]} />
       </mesh>
+      <mesh geometry={nodes.Centre_Spot_Text.geometry} material={materials['Dark.001']} position={[-1.43, 0.05, -3.52]} rotation={[0, Math.PI / 2, 0]} />
+      <mesh geometry={nodes.Mustang_Lounge_E.geometry} material={materials['Dark.002']} position={[-1.5, 0.05, 0.57]} rotation={[0, Math.PI / 2, 0]} />
+      <mesh geometry={nodes.Mustang_Lounge_W.geometry} material={materials['Dark.003']} position={[-1.44, 0.05, 2.46]} rotation={[0, Math.PI / 2, 0]} />
+      <mesh geometry={nodes['InfoSource-Logo-white-bg'].geometry} material={materials['InfoSource-Logo-white-bg']} position={[-0.72, 0.05, -1.75]} rotation={[0, Math.PI / 2, 0]} scale={[0.3, 1, 0.3]} />
+      <mesh geometry={nodes.thespoke.geometry} material={materials.thespoke} position={[2.1, 0.04, -1.58]} rotation={[0, Math.PI / 2, 0]} />
     </group>
   )
 }

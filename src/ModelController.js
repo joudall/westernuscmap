@@ -4,7 +4,7 @@ export const ModelController = ({lowerRef,atriumRef,level3Ref,level2Ref,selected
   useFrame(() => {
     if (lowerRef && lowerRef.current) {
       if (selectedLevel === "Lower Level") {
-        lowerRef.current.position.set(5, 5, 0);
+        lowerRef.current.position.set(5, 4.5, 0);
         lowerRef.current.rotation.set(0, 0, -0.2);
         lowerRef.current.visible = true;
       } else {
@@ -14,7 +14,7 @@ export const ModelController = ({lowerRef,atriumRef,level3Ref,level2Ref,selected
 
     if (atriumRef && atriumRef.current) {
       if (selectedLevel === "Atrium") {
-        atriumRef.current.position.set(5, 5, 0);
+        atriumRef.current.position.set(4, 4.5, 0);
         atriumRef.current.rotation.set(0, 0, -0.2);
         atriumRef.current.visible = true;
       } else {
@@ -24,7 +24,7 @@ export const ModelController = ({lowerRef,atriumRef,level3Ref,level2Ref,selected
 
     if (level3Ref && level3Ref.current) {
       if (selectedLevel === "Level 3") {
-        level3Ref.current.position.set(5, 5, -1);
+        level3Ref.current.position.set(5, 4.5, -1);
         level3Ref.current.rotation.set(0, 0, -0.2);
         level3Ref.current.visible = true;
       } else {
@@ -34,7 +34,7 @@ export const ModelController = ({lowerRef,atriumRef,level3Ref,level2Ref,selected
 
     if (level2Ref && level2Ref.current) {
       if (selectedLevel === "Level 2") {
-        level2Ref.current.position.set(5, 5, -2);
+        level2Ref.current.position.set(5, 6, -1);
         level2Ref.current.rotation.set(0, 9.4, 0.2);
         level2Ref.current.visible = true;
       } else {
