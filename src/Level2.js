@@ -9,7 +9,7 @@ export function Level2({level2Ref,showPopup,handleFloorClick,onHover,onUnhover, 
 
       <mesh geometry={nodes.thewave.geometry} material={materials.thewave} position={[0.6, 0.04, 2.16]} rotation={[0, -Math.PI / 2, 0]} scale={[0.7, 1, 0.7]} />
       <mesh geometry={nodes.Exterior_Walls.geometry} material={materials.Wall_material} position={[-2.16, -0.01, -3.95]}>
-        <mesh geometry={nodes.Floor019.geometry} material={materials.Floor_material} />
+        <mesh geometry={nodes.Floor019.geometry} material={materials.Floor_material} position={[0,-0.01,0]}/>
       </mesh>
 
             <>
@@ -216,6 +216,7 @@ export function Level2({level2Ref,showPopup,handleFloorClick,onHover,onUnhover, 
             hoveredRoom={hoveredRoom} 
             showPopup={showPopup} 
             currentLevel={currentLevel} 
+            floorPosition={[0,0.1,0]}
             Hovered={selectedRoom === "The Wave"}/>
 
             <Room 

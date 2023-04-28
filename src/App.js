@@ -275,7 +275,11 @@ function App() {
               marginBottom: "10px",
             }}
           >
-          {popupExpanded ? <FaCaretDown/> : <FaCaretUp/>}
+          {popupExpanded ? (
+        <FaCaretDown className="black-icon" onClick={() => setPopupExpanded(!popupExpanded)} />
+      ) : (
+        <FaCaretUp className="black-icon" onClick={() => setPopupExpanded(!popupExpanded)} />
+      )}
           </button>
           {popupExpanded &&(
             <>
