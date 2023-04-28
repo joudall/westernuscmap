@@ -216,7 +216,6 @@ export function Level2({level2Ref,showPopup,handleFloorClick,onHover,onUnhover, 
             hoveredRoom={hoveredRoom} 
             showPopup={showPopup} 
             currentLevel={currentLevel} 
-            floorPosition={[0,0.1,0]}
             Hovered={selectedRoom === "The Wave"}/>
 
             <Room 
