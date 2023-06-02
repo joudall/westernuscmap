@@ -163,8 +163,6 @@ function App() {
   <CameraController/>
           <Suspense fallback={null}>
           <spotLight intensity={20} angle={0.1} position={[10, 10, 100]} castShadow/>
-          <Environment preset="city"/>
-
           <Atrium 
             currentLevel={currentLevel}
             popupVisible={popupVisible}
