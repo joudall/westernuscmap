@@ -12,8 +12,6 @@ import findRoom from './FindRoom';
 import { ModelController } from './ModelController';
 import RoomList from './RoomList';
 import CameraController from './CameraController';
-import { FaSearch, FaTimes } from "react-icons/fa";
-import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import USCLogo from './images/USClogo.png';
 
 function App() {
@@ -27,18 +25,18 @@ function App() {
   const [level3ModelClicked, setLevel3ModelClicked] = useState(false);
   const [pointerOverPopup, setPointerOverPopup] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
-  const [showRoomList, setShowRoomList] = useState(false);
   const [currentLevel, setCurrentLevel] = useState(null);
   const formattedHours = roomData ? roomData.Hours.split('\n') : [];
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const [Hovered, setHovered] = useState(false);
-  const [searchIconSelected, setSearchIconSelected] = useState(false);
   const [popupExpanded, setPopupExpanded] = useState(true);
+  const [zoom, setZoom] = useState(20);
 
   const lowerRef = useRef();
   const level3Ref = useRef();
   const level2Ref = useRef();
   const atriumRef = useRef();
+  const cameraControllerRef = useRef();
 
   useEffect(() => {
     setCurrentLevel("Lower Level");
@@ -46,11 +44,6 @@ function App() {
       setCurrentLevel(null);
     };
   }, []);
-
-  const toggleRoomList = () => {
-    setSearchIconSelected(!searchIconSelected);
-    setShowRoomList(!showRoomList);
-  };  
 
   const handleLevelChange = (level) => {
     setCurrentLevel(level);
@@ -94,73 +87,124 @@ function App() {
     }
   };
 
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  const handleMenuItemClick = (level) => {
-    handleRoomClick(level);
-    setSelectedRoom(null);
-    setSidebarOpen(false);
-  };
-
-  const closeSidebar = () => {
-    setSidebarOpen(false);
-  };
-
-  const togglePopupExpanded = () => {
-    setPopupExpanded(!popupExpanded);
+  const closePopup = () => {
+    setPopupVisible(false);
+    setRoomData(null);
+    setSelectedRoom("");
   };
 
   return (
     <div className="wrapper">
-      <div className="controls-container">
-      <div style={{ position: 'absolute', zIndex: 1 }}>
-        <button className="level-button" onClick={() => setShowDropdown((prev) => !prev)}>{currentLevel}<span>&#x25BC;</span></button>
-      
-        {showDropdown && (
-          <div className="level-dropdown">
-            <button className="level-dropdown-item" onClick={() => handleButtonClick("Lower Level")}>Lower Level</button>
-            <button className="level-dropdown-item" onClick={() => handleButtonClick("Atrium")}>Atrium</button>
-            <button className="level-dropdown-item" onClick={() => handleButtonClick("Level 2")}>Level 2</button>
-            <button className="level-dropdown-item" onClick={() => handleButtonClick("Level 3")}>Level 3</button>
-          </div> )}
-        </div>
-        </div>
-
-        <div className="hamburger-menu" onClick={toggleSidebar}>&#9776;</div>
-
-      <div className={`sidebar ${sidebarOpen ? "open" : ""}`}>
-        <button className="close-button" onClick={closeSidebar}>X</button>
-        <ul>
-          <li onClick={() => handleMenuItemClick('Lower Level')}>Lower Level</li>
-          <li onClick={() => handleMenuItemClick('Atrium')}>Atrium</li>
-          <li onClick={() => handleMenuItemClick('Level 2')}>Level 2</li>
-          <li onClick={() => handleMenuItemClick('Level 3')}>Level 3</li>
-        </ul>
+      <div style={{ 
+        position: 'absolute', 
+        zIndex: 100, 
+        top: 20, 
+        left: 20, 
+        width: 350
+      }}>
+        <RoomList
+          handleRoomClick={(floorName, roomName) => {
+            handleRoomClick(floorName, roomName);
+          }}
+          closePopup={closePopup}
+        />
       </div>
 
-      <div style={{ position: 'absolute', zIndex: 1 }}>
-      <button className="search-button" onClick={toggleRoomList}>
-      {searchIconSelected ? (
-        <FaTimes size={25} />
-        ) : (
-        <FaSearch size={25} />
-      )}</button>
-
-      {showRoomList && (
-        <div>
-          <RoomList
-            handleRoomClick={(floorName, roomName) =>
-              handleRoomClick(floorName, roomName)
-            }
-          />
+      <div className="controls-container" style={{ position: 'absolute', top: 20, right: 20, zIndex: 100 }}>
+        <button 
+          className="level-button" 
+          onClick={() => setShowDropdown((prev) => !prev)}
+          style={{
+            backgroundColor: 'white',
+            border: 'none',
+            borderRadius: 4,
+            padding: '8px 16px',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'space-between',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+            cursor: 'pointer',
+            minWidth: 120
+          }}
+        >
+          {currentLevel} <span>{showDropdown ? '▲' : '▼'}</span>
+        </button>
+      
+        {showDropdown && (
+          <div className="level-dropdown" style={{
+            position: 'absolute',
+            top: '100%',
+            right: 0,
+            backgroundColor: 'white',
+            borderRadius: 4,
+            boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+            width: '100%',
+            zIndex: 101
+          }}>
+            <button className="level-dropdown-item" onClick={() => handleButtonClick("Lower Level")} style={{ padding: '8px 16px', width: '100%', textAlign: 'left', border: 'none', borderBottom: '1px solid #eee', cursor: 'pointer' }}>Lower Level</button>
+            <button className="level-dropdown-item" onClick={() => handleButtonClick("Atrium")} style={{ padding: '8px 16px', width: '100%', textAlign: 'left', border: 'none', borderBottom: '1px solid #eee', cursor: 'pointer' }}>Atrium</button>
+            <button className="level-dropdown-item" onClick={() => handleButtonClick("Level 2")} style={{ padding: '8px 16px', width: '100%', textAlign: 'left', border: 'none', borderBottom: '1px solid #eee', cursor: 'pointer' }}>Level 2</button>
+            <button className="level-dropdown-item" onClick={() => handleButtonClick("Level 3")} style={{ padding: '8px 16px', width: '100%', textAlign: 'left', border: 'none', borderBottom: '1px solid #eee', cursor: 'pointer' }}>Level 3</button>
         </div>
       )}
       </div>
 
-<Canvas camera={{ fov: 20, position: [40, 25, 0] }} style={{position: 'absolute', top: 0, left: 0,width: '100%', height: '100%',}}>
-  <CameraController/>
+      <div style={{ 
+        position: 'absolute', 
+        bottom: 20,
+        right: 20, 
+        zIndex: 1001
+      }}>
+        <button 
+          onClick={() => {
+            console.log("Zoom in clicked, current zoom:", zoom);
+            const newZoom = Math.max(zoom - 5, 10);
+            setZoom(newZoom);
+            console.log("New zoom set to:", newZoom);
+          }}
+          style={{
+            width: 40,
+            height: 40,
+            backgroundColor: 'white',
+            border: 'none',
+            borderRadius: '4px 4px 0 0',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+            fontSize: 20,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+            marginBottom: 1
+          }}
+        >+</button>
+        <button 
+          onClick={() => {
+            console.log("Zoom out clicked, current zoom:", zoom);
+            const newZoom = Math.min(zoom + 5, 50);
+            setZoom(newZoom);
+            console.log("New zoom set to:", newZoom);
+          }}
+          style={{
+            width: 40,
+            height: 40,
+            backgroundColor: 'white',
+            border: 'none',
+            borderRadius: '0 0 4px 4px',
+            boxShadow: '0 2px 5px rgba(0,0,0,0.1)',
+            fontSize: 20,
+            cursor: 'pointer',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center'
+          }}
+        >−</button>
+      </div>
+
+<Canvas 
+  camera={{ fov: zoom, position: [40, 25, 0] }} 
+  style={{position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', backgroundColor: '#9285a3'}}
+>
+  <CameraController initialZoom={zoom} onZoomChange={setZoom} ref={cameraControllerRef}/>
           <Suspense fallback={null}>
           <spotLight intensity={20} angle={0.1} position={[10, 10, 100]} castShadow/>
           <Atrium 
@@ -247,89 +291,175 @@ function App() {
       <div
       className={`popup ${popupExpanded ? "expanded" : ""}`}
         onPointerOver={() => setPointerOverPopup(true)}
-        onPointerOut={() => setPointerOverPopup(false)}>
+        onPointerOut={() => setPointerOverPopup(false)}
+        style={{
+          position: 'absolute',
+          backgroundColor: 'white',
+          padding: 20,
+          borderRadius: 16,
+          boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+          zIndex: 1000,
+          width: 350,
+          top: 80,
+          left: 20
+        }}
+      >
+        <div style={{ 
+          position: 'absolute', 
+          top: 15, 
+          right: 15, 
+          display: 'flex', 
+          gap: 10 
+        }}>
         <button
-          className="close-button"
+            style={{
+              width: 32,
+              height: 32,
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              backgroundColor: '#f1f1f1',
+              border: 'none',
+              borderRadius: '50%',
+              cursor: 'pointer',
+              fontSize: 16
+            }}
           onClick={() => {
             setRoomData(null);
             setSelectedRoom("");
             setPopupVisible(false);
           }}
-        >X{" "}</button>
-        <div>
-          {roomData.Name.trim() !== "" ? (
-            <>
-              <p><b>Name: </b> {roomData.Name}</p>
-            </>
-          ) : null}
-          <button
-            className="toggle-details-btn"
-            onClick={togglePopupExpanded}
-            style={{
-              backgroundColor: "transparent",
-              border: "none",
-              cursor: "pointer",
-              textAlign: "left",
-              marginBottom: "10px",
-            }}
           >
-          {popupExpanded ? (
-        <FaCaretDown className="black-icon" onClick={() => setPopupExpanded(!popupExpanded)} />
-      ) : (
-        <FaCaretUp className="black-icon" onClick={() => setPopupExpanded(!popupExpanded)} />
-      )}
+            ×
           </button>
-          {popupExpanded &&(
-            <>
-              {roomData.Content.trim() !== "" ? (
-                <>
-                  <p><b>Description: </b> {roomData.Content} </p>
-                </>
-              ) : null}
-              {roomData.Hours.trim() !== "" ? (
-                <>
-                  <p><b>Hours:</b></p>
-                  <ul>
-                    {formattedHours.map((hour, index) => (
-                      <li key={index}>{hour}</li>
-                    ))}
-                  </ul>
-                </>
-              ) : null}
-              {roomData.Website.trim() !== "" ? (
-                <>
-                  <p>
-                    <b>Website: </b>{" "}
+        </div>
+
+        <div>
+          <h2 style={{ 
+            fontSize: 22, 
+            fontWeight: 'bold', 
+            marginBottom: 6,
+            marginTop: 0
+          }}>{roomData.Name}</h2>
+          
+          <div style={{ display: 'flex', alignItems: 'center', marginBottom: 12 }}>
+          </div>
+
+          <div style={{ marginBottom: 20 }}>
+            <h3 style={{ 
+              fontSize: 16, 
+              fontWeight: 'bold', 
+              marginBottom: 8 
+            }}>Hours</h3>
+            <div style={{ display: '', justifyContent: 'space-between' }}>
+              <span style={{ 
+                fontSize: 14 
+              }}>{roomData.Hours.trim() !== "" ? roomData.Hours.split('\n')[0] : 'Until UCC closes'}</span>
+            </div>
+          </div>
+
+           <div style={{ marginBottom: 20 }}>
+            <h3 style={{ 
+              fontSize: 16, 
+              fontWeight: 'bold', 
+              marginBottom: 8 
+            }}>Description</h3>
+          {roomData.Content.trim() !== "" && (
+            <div style={{ marginBottom: 20 }}>
+              <p style={{ 
+                fontSize: 14, 
+                lineHeight: 1.5,
+                margin: 0
+              }}>
+                {roomData.Content}
+              </p>
+              {roomData.Content.length > 100 && (
+                <button style={{ 
+                  background: 'none',
+                  border: 'none',
+                  color: '#1a73e8',
+                  padding: 0,
+                  fontSize: 14,
+                  cursor: 'pointer',
+                  marginTop: 4
+                }}>
+                </button>
+              )}
+            </div>
+          )}
+          </div>
+          <div style={{ 
+            display: 'flex', 
+            marginTop: 10,
+            gap: 10
+          }}>
+            {roomData.Website.trim() !== "" && (
                     <a
                       href={roomData.Website}
                       target="_blank"
-                      rel="noopener noreferrer">
-                      {roomData.Website}
-                    </a>
-                  </p>
-                </>
-              ) : null}
-            </>
-          )}
+                rel="noopener noreferrer"
+                style={{ 
+                  backgroundColor: '#f1f1f1', 
+                  border: 'none', 
+                  borderRadius: 16, 
+                  padding: '8px 16px', 
+                  display: 'flex', 
+                  alignItems: 'center',
+                  fontSize: 14,
+                  textDecoration: 'none',
+                  color: 'inherit',
+                  cursor: 'pointer'
+                }}
+              >
+                <span style={{ marginRight: 8 }}>🌐</span> 
+                Website
+              </a>
+            )}
+          </div>
         </div>
       </div>
     ) : (
       popupVisible && (
-        <div className="popup">
+        <div className="popup" style={{
+          position: 'absolute',
+          backgroundColor: 'white',
+          padding: 15,
+          borderRadius: 8,
+          boxShadow: '0 2px 10px rgba(0,0,0,0.2)',
+          zIndex: 1000,
+          top: 100,
+          left: 20
+        }}>
           <button
             className="close-button"
             onClick={() => {
               setPopupVisible(false);
+            }}
+            style={{
+              position: 'absolute',
+              top: 10,
+              right: 10,
+              background: 'none',
+              border: 'none',
+              fontSize: 16,
+              cursor: 'pointer'
             }}
           >X</button>
           <div>Room not found.</div>
         </div>
       )
     )
-  )};
+  )
+}
 
-      <div className="logo">
-        <img src={USCLogo} alt="USC Logo" width={100} height={100} />
+      <div className="logo" style={{ 
+        position: 'absolute', 
+        bottom: 20, 
+        left: 20, 
+        zIndex: 100,
+        pointerEvents: 'none'
+      }}>
+        <img src={USCLogo} alt="USC Logo" width={80} height={80} style={{ pointerEvents: 'auto' }} />
       </div>
       </div>
   );
